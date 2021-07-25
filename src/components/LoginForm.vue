@@ -19,7 +19,7 @@
 			const handleSubmit = async () => {
 				await login(email.value, password.value);
 				if (!error.value) {
-					context.$emit('login');
+					context.emit('login');
 				}
 			};
 			return { email, password, handleSubmit, error };
